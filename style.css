@@ -1,0 +1,398 @@
+/* Allgemeine Einstellungen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background-color: #1f1f1f;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #bbb;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: #1f1f1f;
+        transition: left 0.3s ease-in-out;
+    }
+    #menu-toggle:checked + .hamburger + .menu {
+        left: 0;
+    }
+    nav ul li {
+        margin: 1em 0;
+        text-align: center;
+    }
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#theme-toggle:focus {
+    outline: none;
+}
+
+/* Abschnitte */
+section {
+    padding: 5em 2em;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 4em;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #e0e0e0;
+}
+
+/* Startseite */
+#home {
+    background: url('images/header-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+#home p {
+    font-size: 1.5em;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Projekte */
+#projects .project {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+#projects .project a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+#projects .project a:hover {
+    opacity: 0.9;
+}
+
+#projects .project img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+
+#projects .project:hover img {
+    transform: scale(1.1);
+}
+
+#projects .project h3, #projects .project p {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+#projects .project h3 {
+    top: 40%;
+    font-size: 2em;
+}
+
+#projects .project p {
+    top: 55%;
+}
+
+#projects .project:hover h3, #projects .project:hover p {
+    opacity: 1;
+}
+
+/* Über mich */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.personal-info, .skills {
+    flex: 1;
+    min-width: 300px;
+    margin: 1em;
+}
+
+.personal-info h3, .skills h3 {
+    margin-bottom: 1em;
+    color: #ccc;
+}
+
+.skills ul {
+    list-style-type: none;
+}
+
+.skills ul li::before {
+    content: "•";
+    color: #888;
+    margin-right: 0.5em;
+}
+
+.experience, .education, .languages, .interests {
+    margin-top: 2em;
+}
+
+.experience h3, .education h3, .languages h3, .interests h3 {
+    margin-bottom: 1em;
+    color: #ccc;
+}
+
+.experience .job, .education .edu {
+    background-color: #1f1f1f;
+    padding: 1.5em;
+    margin: 1em 0;
+    border-left: 4px solid #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.experience h4, .education h4 {
+    margin-bottom: 0.5em;
+}
+
+.languages ul, .interests ul {
+    list-style-type: none;
+}
+
+.languages ul li, .interests ul li {
+    padding: 0.5em 0;
+}
+
+/* Skills Bar */
+.skill {
+    margin-bottom: 1em;
+}
+
+.skill p {
+    margin-bottom: 0.5em;
+}
+
+.progress {
+    background-color: #444;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #888;
+    width: 0;
+    border-radius: 20px;
+}
+
+/* Kontaktformular */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    margin: 0.5em 0 0.2em;
+}
+
+form input, form textarea {
+    padding: 0.7em;
+    margin-bottom: 1em;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #888;
+}
+
+form button {
+    padding: 0.7em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+#formFeedback {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1em;
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#backToTop:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .logo,
+body.dark-mode nav ul li a {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #bbb;
+}
+
+body.dark-mode form button,
+body.dark-mode #backToTop {
+    background-color: #333;
+}
+
+body.dark-mode form button:hover,
+body.dark-mode #backToTop:hover {
+    background-color: #555;
+}
+
+body.dark-mode .progress {
+    background-color: #222;
+}
+
+body.dark-mode .progress-bar {
+    background-color: #555;
+}
+
+body.dark-mode form input, body.dark-mode form textarea {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+}

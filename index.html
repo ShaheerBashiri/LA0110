@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Meta-Daten -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mohammad Shahir Bashiri</title>
+    <!-- CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- AOS für Scroll-Animationen -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init('lzMp4tWc_OlU6FalQ'); // Ersetzen Sie 'YOUR_USER_ID' durch Ihre EmailJS User ID
+       })();
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Mohammad Shahir Bashiri</div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            <ul class="menu">
+                <li><a href="#home">Startseite</a></li>
+                <li><a href="#projects">Projekte</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li>
+                    <button id="theme-toggle">🌙</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Startseite -->
+    <section id="home">
+        <h1 id="typing"></h1>
+        <p>Hallo! Ich bin Mohammad Shahir Bashiri, ein Webentwickler mit Expertise in HTML, CSS und JavaScript.</p>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projects">
+        <h2>Projekte</h2>
+        <div class="project" data-aos="fade-up">
+            <a href="https://github.com/ShaheerBashiri/LA1302" target="_blank" rel="noopener noreferrer">
+                <img src="project1.jpg" alt="Projekt 1">
+                <h3>Projekt 1</h3>
+                <p>Eine Seite auf welchem man ein Städte-Quiz spielen kann. Es soll Lehrreich sein, deswegen werden die Punkte zurückgesetzt um den Benutzer zu motivieren. Man wird gefragt was die Hauptstadt eines Landes ist, und kann die Antwort hineinschreiben oder clicken und so Punkte sammeln</p>
+            </a>
+        </div>
+        <div class="project" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://github.com/B1zy/La1303-Jahr-2" target="_blank" rel="noopener noreferrer">
+                <img src="project2.jpg" alt="Projekt 2">
+                <h3>Projekt 2</h3>
+                <p>Unser Projekt ist die Entwicklung einer benutzerfreundlichen Verschlüsselungswebseite.
+
+                </p>
+            </a>
+        </div>
+        <!-- Weitere Projekte hinzufügen -->
+    </section>
+
+    <!-- Über mich -->
+    <section id="about">
+        <h2>Über mich</h2>
+        <div class="about-container">
+            <!-- Persönliche Daten -->
+            <div class="personal-info" data-aos="fade-right">
+                <h3>Persönliche Informationen</h3>
+                <p><strong>Name:</strong> Mohammad Shahir Bashiri</p>
+                <p><strong>E-Mail-Adresse:</strong> shaheerbashiri5@gmail.com</p>
+                <p><strong>Adresse:</strong> Heinrich Wehrli-Strasse 5</p>
+                <p><strong>Telefonnummer:</strong> +41 78 241 45 08</p>
+                <p><strong>Geburtsdatum:</strong> 15. Januar 2005</p>
+            </div>
+            <!-- Fähigkeiten -->
+            <div class="skills" data-aos="fade-left">
+                <h3>IT-Fähigkeiten</h3>
+                <div class="skill">
+                    <p>JavaScript</p>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="90%" style="width: 0;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>C#</p>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="85%" style="width: 0;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Docker</p>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="80%" style="width: 0;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>AWS</p>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="75%" style="width: 0;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>SQL</p>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="85%" style="width: 0;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>NoSQL</p>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="80%" style="width: 0;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>HTML</p>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="95%" style="width: 0;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>CSS</p>
+                    <div class="progress">
+                        <div class="progress-bar" data-skill-level="90%" style="width: 0;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Berufserfahrung -->
+        <div class="experience" data-aos="fade-up">
+            <h3>Berufserfahrung</h3>
+            <div class="job">
+                <h4>Aushilfe Kaltkonditorei</h4>
+                <p><strong>Unternehmen:</strong> Coop Genossenschaft</p>
+                <p><strong>Ort:</strong> Rupperswilerstrasse 2, 5503 Schafisheim</p>
+                <p><strong>Zeitraum:</strong> November 2023 – aktuell</p>
+            </div>
+            <div class="job">
+                <h4>Aushilfe Gastronomie Energy Air</h4>
+                <p><strong>Unternehmen:</strong> Genossenschaft ZFV-Unternehmungen</p>
+                <p><strong>Ort:</strong> Zürich Letzigrund</p>
+                <p><strong>Zeitraum:</strong> September 2023</p>
+            </div>
+            <div class="job">
+                <h4>Aushilfe Gastronomie Weltklasse</h4>
+                <p><strong>Unternehmen:</strong> Genossenschaft ZFV-Unternehmungen</p>
+                <p><strong>Ort:</strong> Zürich Letzigrund</p>
+                <p><strong>Zeitraum:</strong> August 2023</p>
+            </div>
+            <div class="job">
+                <h4>Aushilfe Gastronomie Coldplay Konzert</h4>
+                <p><strong>Unternehmen:</strong> Genossenschaft ZFV-Unternehmungen</p>
+                <p><strong>Ort:</strong> Zürich Letzigrund</p>
+                <p><strong>Zeitraum:</strong> Juni 2023</p>
+            </div>
+        </div>
+
+        <!-- Ausbildung -->
+        <div class="education" data-aos="fade-up">
+            <h3>Ausbildung</h3>
+            <div class="edu">
+                <h4>Informatikmittelschule, Alte Kantonsschule</h4>
+                <p><strong>Ort:</strong> Aarau</p>
+                <p><strong>Zeitraum:</strong> August 2022 – aktuell</p>
+            </div>
+            <div class="edu">
+                <h4>Sekundarschule</h4>
+                <p><strong>Ort:</strong> Hunzenschwil</p>
+                <p><strong>Zeitraum:</strong> August 2018 – Juli 2021</p>
+            </div>
+            <div class="edu">
+                <h4>5. und 6. Primarschule</h4>
+                <p><strong>Ort:</strong> Hunzenschwil</p>
+                <p><strong>Zeitraum:</strong> August 2016 – Juli 2018</p>
+            </div>
+            <div class="edu">
+                <h4>1. Klasse bis 4. Klasse</h4>
+                <p><strong>Ort:</strong> Kabul, Afghanistan</p>
+                <p><strong>Zeitraum:</strong> August 2009 – Juli 2013</p>
+            </div>
+        </div>
+
+        <!-- Sprachkenntnisse -->
+        <div class="languages" data-aos="fade-up">
+            <h3>Sprachkenntnisse</h3>
+            <ul>
+                <li><strong>Deutsch:</strong> Muttersprache</li>
+                <li><strong>Englisch:</strong> Muttersprache</li>
+                <li><strong>Französisch:</strong> Gute Kenntnisse</li>
+                <li><strong>Persisch:</strong> Muttersprache</li>
+            </ul>
+        </div>
+
+        <!-- Persönliche Interessen -->
+        <div class="interests" data-aos="fade-up">
+            <h3>Persönliche Interessen</h3>
+            <ul>
+                <li>Krafttraining</li>
+                <li>Musik</li>
+                <li>Technologie</li>
+                <li>Programmieren</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact">
+        <h2>Kontaktieren Sie mich</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="from_name" required>
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="from_email" required>
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Nachricht senden</button>
+            <p id="formFeedback"></p>
+        </form>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Nach oben">&#8679;</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Mohammad Shahir Bashiri. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- JavaScript-Dateien -->
+    <script src="script.js"></script>
+    <!-- AOS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>
